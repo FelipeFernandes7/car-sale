@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 export function Header() {
-  const { loadingAuth, signed } = useContext(AuthContext);
+  const { loadingAuth, signed, user } = useContext(AuthContext);
 
   return (
     <div className="w-full flex items-center justify-center h-16 bg-white drop-shadow mb-4">
@@ -15,14 +15,16 @@ export function Header() {
           <img className="max-h-20 w-20" src={logoImg} alt="logo" />
         </Link>
         {!loadingAuth && signed && (
-          <Link to={"/dashboard"}>
+          <Link to={"/dashboard"} className=" flex items-center gap-4">
+            olá <strong>{user?.name}</strong>
             <div className="border-2 rounded-full p-1 border-gray-900 ">
               <FiUser size={24} color="#000" cursor={"pointer"} />
             </div>
           </Link>
         )}
         {!loadingAuth && !signed && (
-          <Link to={"/login"}>
+          <Link to={"/login"} className=" flex items-center gap-4">
+            Olá <strong>{!user && "Visitante"}</strong>
             <FiLogIn size={24} color="#000" cursor={"pointer"} />
           </Link>
         )}
