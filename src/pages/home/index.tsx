@@ -3,7 +3,6 @@ import { Container } from "../../components/container";
 import { AiOutlineSearch } from "react-icons/ai";
 
 import {
-  QuerySnapshot,
   collection,
   getDocs,
   orderBy,
