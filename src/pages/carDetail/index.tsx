@@ -104,7 +104,8 @@ export function CarDetail() {
             </h1>
             <h1 className="font-bold text-3xl text-black">R${car?.price}</h1>
           </div>
-          <p>{car?.model}</p>
+          <p>Modelo</p>
+          <strong>{car?.model}</strong>
           <div className="flex w-full gap-6 my-4">
             <div className=" flex flex-col gap-4">
               <div>
