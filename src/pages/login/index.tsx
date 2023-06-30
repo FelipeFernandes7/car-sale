@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logo-car.png";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../../services/firebase";
 import { toast } from "react-hot-toast";
