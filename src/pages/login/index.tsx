@@ -50,9 +50,9 @@ export function Login() {
   }, []);
   return (
     <Container>
-      <div className=" w-full min-h-screen flex justify-center items-center flex-col gap-4">
-        <Link to={"/"} className="mb-6 max-w-sm w-full">
-          <img className="w-full" src={logoImg} alt="logo" />
+      <div className=" w-full min-h-screen flex justify-center items-center flex-col gap-1">
+        <Link to={"/"} className="mb-6 max-w-sm w-full justify-center">
+          <img className="w-full h-72" src={logoImg} alt="logo" />
         </Link>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -83,7 +83,10 @@ export function Login() {
             Entrar
           </button>
         </form>
-        <Link to={"/register"}>Ainda não possui uma conta? cadastre-se</Link>
+        <Link to={"/register"}>
+          Ainda não possui uma conta?{" "}
+          <span className="text-sky-400 underline">cadastre-se</span>
+        </Link>
       </div>
     </Container>
   );

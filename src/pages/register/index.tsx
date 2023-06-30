@@ -5,7 +5,7 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import logoImg from "../../assets/logo.svg";
+import logoImg from "../../assets/logo-car.png";
 import { auth } from "../../services/firebase";
 import {
   createUserWithEmailAndPassword,
@@ -75,8 +75,8 @@ export function Register() {
   return (
     <Container>
       <div className=" w-full min-h-screen flex justify-center items-center flex-col gap-4">
-        <Link to={"/"} className="mb-6 max-w-sm w-full">
-          <img className="w-full" src={logoImg} alt="logo" />
+        <Link to={"/"} className=" max-w-sm w-full">
+          <img className="w-full h-72" src={logoImg} alt="logo" />
         </Link>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -117,7 +117,10 @@ export function Register() {
             Cadastrar
           </button>
         </form>
-        <Link to={"/login"}>Já possui uma conta? faça login</Link>
+        <Link to={"/login"}>
+          Já possui uma conta?{" "}
+          <span className="text-sky-400 underline">faça login!</span>
+        </Link>
       </div>
     </Container>
   );
