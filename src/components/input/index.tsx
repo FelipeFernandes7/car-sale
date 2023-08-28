@@ -20,7 +20,7 @@ export function Input({
     <div>
       <input
         className="w-full border-2 rounded-md px-2 h-11 outline-none"
-        style={{ border: errors ? "2px solidred" : "" }}
+        style={{ border: errors ? "2px solid red" : "" }}
         type={type}
         placeholder={placeholder}
         {...register(name, rules)}
